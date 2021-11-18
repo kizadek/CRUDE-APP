@@ -33,6 +33,8 @@ app.use(Express.json());
 
 // load routers
 
+app.use("/",require("./server/routes/routes"))
+
 //test
 app.get('/test',(req,res)=>{
     return res.send(`<h1>Server Is Healthy Runing on PORT:: ${process.env.PORT} </h1>`);
